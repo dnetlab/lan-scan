@@ -1,0 +1,14 @@
+#!/bin/sh /etc/rc.common
+
+start() {
+	/usr/sbin/lan-scan
+}
+
+stop() {
+	killall lan-scan
+}
+
+boot() {
+	mkdir -p /tmp/lanscan
+	start
+}
